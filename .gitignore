@@ -1,0 +1,14 @@
+# Raw TESSY-Code-80K dataset (4 GB) — re-download with:
+#   hf download CoopReason/TESSY-Code-80K --repo-type dataset --local-dir data/tessy-code-80k
+data/tessy-code-80k/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/

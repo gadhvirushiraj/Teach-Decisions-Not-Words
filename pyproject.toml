@@ -1,0 +1,17 @@
+[project]
+name = "probe-check"
+version = "0.1.0"
+description = "Probing Qwen3-4B reasoning traces for backtracking / move prediction"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    # Step 2: generation (Qwen3 support needs vllm>=0.8.5, transformers>=4.51)
+    "vllm>=0.8.5",
+    "transformers>=4.51.0",
+    # dataset download (`hf download ...`)
+    "huggingface_hub[cli]>=0.30",
+    "tqdm",
+]
+
+[tool.uv]
+# vLLM wheels are Linux + CUDA only; this project is meant to be synced on the GPU server.
+environments = ["sys_platform == 'linux'"]
